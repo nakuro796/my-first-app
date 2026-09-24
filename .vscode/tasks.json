@@ -1,0 +1,16 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "cargo",              // ① タスクの種類
+      "command": "run",            // ② 実行するcargoコマンド
+      "args": ["--release"],         // ★ 追加可能: コマンドに渡す引数
+      "problemMatcher": ["$rustc"],  // ③ エラー表示の解析ルール
+      "group": {                     // ④ ショートカットキーの割り当て
+        "kind": "build",
+        "isDefault": true
+      },
+      "label": "rust: cargo build"   // ⑤ タスクの表示名
+    }
+  ]
+}
